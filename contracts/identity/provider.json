@@ -1,0 +1,24 @@
+﻿{
+  "$schema": "veritas://schema/identity/provider/v1",
+  "contract": "IdentityProvider",
+  "version": "1.0.0",
+
+  "provider": {
+    "id": "string",
+    "name": "string",
+    "type": "WINDOWS|AD|LDAP|OIDC|SAML|CERTIFICATE|INSTITUTION_DEFINED",
+    "authority": "string"
+  },
+
+  "resolution": {
+    "identity": "string",
+    "institution": "string",
+    "status": "UNKNOWN|VERIFIED|UNVERIFIED|REVOKED"
+  },
+
+  "attestation": {
+    "method": "string",
+    "reference": "string",
+    "timestamp": "datetime"
+  }
+}

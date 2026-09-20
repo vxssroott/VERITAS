@@ -1,0 +1,12 @@
+﻿{
+  "schema": "veritas://authority/assignments/v1",
+  "version": "1.0.0",
+
+  "authoritySource": {
+    "id": "LOCAL-DEVELOPMENT-REGISTRY",
+    "type": "DEVELOPMENT_ONLY",
+    "authoritative": false
+  },
+
+  "assignments": []
+}

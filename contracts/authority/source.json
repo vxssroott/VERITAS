@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "veritas://schema/authority/source/v1",
+  "contract": "AuthoritySource",
+  "version": "1.0.0",
+
+  "source": {
+    "id": "string",
+    "name": "string",
+    "type": "DIRECTORY|IDENTITY_PROVIDER|ROLE_REGISTRY|CERTIFICATE|INSTITUTION_API|SIGNED_DOCUMENT",
+    "authoritative": false
+  },
+
+  "assignment": {
+    "operatorId": "string",
+    "institutionId": "string",
+    "roleId": "string",
+    "authorityProfileId": "string"
+  },
+
+  "validity": {
+    "effectiveAt": "datetime",
+    "expiresAt": "datetime"
+  },
+
+  "attestation": {
+    "status": "UNVERIFIED|VERIFIED|REVOKED|EXPIRED",
+    "reference": "string",
+    "verifiedAt": "datetime"
+  }
+}

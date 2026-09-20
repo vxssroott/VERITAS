@@ -1,0 +1,37 @@
+﻿{
+  "testSuite": "VERITAS.IdentityAuthority",
+  "version": "1.0.0",
+
+  "tests": [
+    {
+      "id": "IA-001",
+      "name": "Identity must originate from an authentication source",
+      "expected": "PASS"
+    },
+    {
+      "id": "IA-002",
+      "name": "Declared role must not create authority",
+      "expected": "PASS"
+    },
+    {
+      "id": "IA-003",
+      "name": "Missing authority source remains unresolved",
+      "expected": "PASS"
+    },
+    {
+      "id": "IA-004",
+      "name": "Conflicting authority assignments remain unresolved",
+      "expected": "PASS"
+    },
+    {
+      "id": "IA-005",
+      "name": "Execution is not implied by identity",
+      "expected": "PASS"
+    },
+    {
+      "id": "IA-006",
+      "name": "Execution is not implied by authority",
+      "expected": "PASS"
+    }
+  ]
+}
