@@ -1,0 +1,25 @@
+﻿{
+  "$schema": "veritas://schema/reconciliation/v1",
+  "contract": "ReconciliationState",
+  "version": "1.0.0",
+
+  "transaction": {
+    "transactionId": "string",
+    "expectedVersion": "integer"
+  },
+
+  "observed": {
+    "source": "string",
+    "state": "string",
+    "observedAt": "datetime"
+  },
+
+  "comparison": {
+    "status": "MATCHED|MISMATCHED|PENDING|UNKNOWN",
+    "differences": []
+  },
+
+  "evidence": {
+    "evidenceReferences": []
+  }
+}

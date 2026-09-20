@@ -1,0 +1,37 @@
+﻿{
+  "$schema": "veritas://schema/notification/v1",
+  "contract": "OperatorNotification",
+  "version": "1.0.0",
+
+  "notification": {
+    "notificationId": "string",
+    "type": "ACTION_REQUIRED|STATUS|EXCEPTION|SECURITY|SYSTEM",
+    "createdAt": "datetime",
+    "expiresAt": "datetime"
+  },
+
+  "recipient": {
+    "operatorId": "string",
+    "institutionId": "string"
+  },
+
+  "context": {
+    "transactionId": "string",
+    "transactionVersion": "integer",
+    "workflowState": "string"
+  },
+
+  "handoff": {
+    "tokenReference": "string",
+    "expiresAt": "datetime"
+  },
+
+  "security": {
+    "authoritative": false,
+    "containsAuthorization": false
+  },
+
+  "delivery": {
+    "state": "CREATED|QUEUED|DELIVERED|SEEN|OPENED|EXPIRED|ACKNOWLEDGED"
+  }
+}

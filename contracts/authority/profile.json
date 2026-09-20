@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "veritas://schema/authority/v1",
+  "contract": "AuthorityProfile",
+  "version": "1.0.0",
+
+  "authority": {
+    "profileId": "string",
+    "institutionId": "string",
+    "operatorId": "string",
+    "roleId": "string",
+    "source": "string"
+  },
+
+  "scope": {
+    "environments": [],
+    "businessUnits": [],
+    "transactionTypes": [],
+    "resources": [],
+    "operations": []
+  },
+
+  "validity": {
+    "effectiveAt": "datetime",
+    "expiresAt": "datetime"
+  },
+
+  "attestation": {
+    "status": "UNVERIFIED|VERIFIED|REVOKED|EXPIRED",
+    "reference": "string"
+  }
+}

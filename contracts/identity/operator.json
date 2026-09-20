@@ -1,0 +1,25 @@
+﻿{
+  "$schema": "veritas://schema/identity/v1",
+  "contract": "OperatorIdentity",
+  "version": "1.0.0",
+
+  "identity": {
+    "operatorId": "string",
+    "institutionId": "string",
+    "displayName": "string",
+    "directoryIdentity": "string",
+    "certificateIdentity": "string"
+  },
+
+  "device": {
+    "deviceId": "string",
+    "deviceTrustState": "UNKNOWN|TRUSTED|UNTRUSTED"
+  },
+
+  "session": {
+    "sessionId": "string",
+    "authenticationMethod": "string",
+    "authenticatedAt": "datetime",
+    "expiresAt": "datetime"
+  }
+}

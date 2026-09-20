@@ -1,0 +1,41 @@
+﻿{
+  "$schema": "veritas://schema/transaction/v1",
+  "contract": "Transaction",
+  "version": "1.0.0",
+
+  "transaction": {
+    "transactionId": "string",
+    "version": "integer",
+    "type": "string",
+    "status": "DRAFT|VALIDATING|READY|PENDING_REVIEW|AUTHORIZED|EXECUTING|TRANSMITTED|ACKNOWLEDGED|SETTLED|RECONCILING|COMPLETED|FAILED|CANCELLED|REJECTED"
+  },
+
+  "institution": {
+    "institutionId": "string",
+    "environment": "string"
+  },
+
+  "originator": {
+    "operatorId": "string",
+    "sessionId": "string"
+  },
+
+  "instruction": {
+    "amount": "decimal",
+    "currency": "string",
+    "beneficiary": "object",
+    "destination": "object",
+    "valueDate": "date",
+    "charges": "string"
+  },
+
+  "message": {
+    "standard": "string",
+    "profile": "string",
+    "payloadReference": "string"
+  },
+
+  "integrity": {
+    "contentDigest": "string"
+  }
+}

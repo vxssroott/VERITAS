@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "veritas://schema/policy/v1",
+  "contract": "PolicyDecision",
+  "version": "1.0.0",
+
+  "request": {
+    "requestId": "string",
+    "operation": "string",
+    "resource": "string",
+    "subject": "string"
+  },
+
+  "evaluation": {
+    "policySetId": "string",
+    "policySetVersion": "string",
+    "decision": "ALLOW|DENY|REVIEW|UNRESOLVED",
+    "reasons": []
+  },
+
+  "context": {
+    "institution": "string",
+    "environment": "string",
+    "transaction": "string",
+    "session": "string"
+  },
+
+  "evidence": {
+    "evaluationId": "string",
+    "evaluatedAt": "datetime"
+  }
+}

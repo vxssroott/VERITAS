@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "veritas://schema/consent/v1",
+  "contract": "ExecutionConsent",
+  "version": "1.0.0",
+
+  "consent": {
+    "consentId": "string",
+    "executionRequestId": "string",
+    "transactionId": "string",
+    "transactionVersion": "integer"
+  },
+
+  "operator": {
+    "operatorId": "string",
+    "sessionId": "string"
+  },
+
+  "decision": {
+    "value": "APPROVE|DENY",
+    "timestamp": "datetime",
+    "authenticationMethod": "string"
+  },
+
+  "binding": {
+    "institutionId": "string",
+    "operationDigest": "string",
+    "transactionDigest": "string"
+  },
+
+  "validity": {
+    "issuedAt": "datetime",
+    "expiresAt": "datetime",
+    "revoked": false
+  }
+}

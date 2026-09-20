@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "veritas://schema/common/v1",
+  "contract": "CommonIdentity",
+  "version": "1.0.0",
+
+  "system": {
+    "product": "VERITAS",
+    "contractVersion": "1.0.0"
+  },
+
+  "identifiers": {
+    "id": "string",
+    "type": "string",
+    "version": "string"
+  },
+
+  "temporal": {
+    "createdAt": "datetime",
+    "updatedAt": "datetime"
+  },
+
+  "provenance": {
+    "source": "string",
+    "actor": "string",
+    "session": "string"
+  },
+
+  "integrity": {
+    "algorithm": "string",
+    "digest": "string"
+  }
+}

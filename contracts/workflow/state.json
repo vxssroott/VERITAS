@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "veritas://schema/workflow/v1",
+  "contract": "WorkflowState",
+  "version": "1.0.0",
+
+  "transactionId": "string",
+  "version": "integer",
+
+  "state": {
+    "current": "string",
+    "previous": "string"
+  },
+
+  "actor": {
+    "operatorId": "string",
+    "roleId": "string",
+    "sessionId": "string"
+  },
+
+  "transition": {
+    "action": "string",
+    "reason": "string",
+    "timestamp": "datetime"
+  },
+
+  "authority": {
+    "profileId": "string",
+    "capabilityId": "string"
+  }
+}

@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "veritas://schema/capability/v1",
+  "contract": "Capability",
+  "version": "1.0.0",
+
+  "capability": {
+    "id": "string",
+    "name": "string",
+    "description": "string"
+  },
+
+  "subject": {
+    "institutionId": "string",
+    "operatorId": "string",
+    "authorityProfileId": "string"
+  },
+
+  "scope": {
+    "resources": [],
+    "operations": [],
+    "environments": []
+  },
+
+  "constraints": {
+    "transactionTypes": [],
+    "amountLimits": [],
+    "timeWindows": [],
+    "geographicScopes": []
+  },
+
+  "state": "ACTIVE|SUSPENDED|EXPIRED|REVOKED"
+}

@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "veritas://schema/evidence/v1",
+  "contract": "EvidenceRecord",
+  "version": "1.0.0",
+
+  "event": {
+    "eventId": "string",
+    "eventType": "string",
+    "timestamp": "datetime"
+  },
+
+  "subject": {
+    "institutionId": "string",
+    "operatorId": "string",
+    "sessionId": "string",
+    "transactionId": "string"
+  },
+
+  "provenance": {
+    "sourceSystem": "string",
+    "sourceEventId": "string"
+  },
+
+  "integrity": {
+    "payloadDigest": "string",
+    "previousDigest": "string",
+    "chainDigest": "string"
+  },
+
+  "classification": {
+    "category": "TRANSACTION|AUTHORITY|CONSENT|EXECUTION|SECURITY|AUDIT|INFRASTRUCTURE"
+  }
+}

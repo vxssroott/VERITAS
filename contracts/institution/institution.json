@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "veritas://schema/institution/v1",
+  "contract": "Institution",
+  "version": "1.0.0",
+
+  "institution": {
+    "id": "string",
+    "legalName": "string",
+    "displayName": "string",
+    "bic": "string",
+    "country": "string",
+    "environment": "DEVELOPMENT|TEST|UAT|PRODUCTION"
+  },
+
+  "infrastructure": {
+    "identity": "string",
+    "trustDomain": "string",
+    "networkDomains": [],
+    "serviceDomains": []
+  },
+
+  "authority": {
+    "authorityDomain": "string",
+    "authoritySource": "string",
+    "delegationReference": "string"
+  },
+
+  "configuration": {
+    "profileId": "string",
+    "profileVersion": "string"
+  }
+}

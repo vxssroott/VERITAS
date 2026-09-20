@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "veritas://schema/execution/v1",
+  "contract": "ExecutionRequest",
+  "version": "1.0.0",
+
+  "request": {
+    "executionRequestId": "string",
+    "transactionId": "string",
+    "transactionVersion": "integer",
+    "operation": "string"
+  },
+
+  "subject": {
+    "institutionId": "string",
+    "operatorId": "string",
+    "sessionId": "string"
+  },
+
+  "preconditions": {
+    "identityVerified": false,
+    "authorityVerified": false,
+    "capabilityVerified": false,
+    "policyEvaluated": false,
+    "transactionIntegrityVerified": false,
+    "resourceStateVerified": false
+  },
+
+  "execution": {
+    "state": "LOCKED|ELIGIBLE|CONSENT_REQUIRED|AUTHORIZED|EXECUTING|COMPLETED|FAILED|CANCELLED"
+  }
+}
