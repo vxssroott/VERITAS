@@ -1,0 +1,46 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/transaction/state-transition",
+  "title": "VERITAS Transaction State Transition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "transactionId",
+    "fromState",
+    "toState",
+    "transactionVersion",
+    "requestedBy",
+    "requestedAt",
+    "reason"
+  ],
+  "properties": {
+    "transactionId": {
+      "type": "string"
+    },
+    "fromState": {
+      "type": "string"
+    },
+    "toState": {
+      "type": "string"
+    },
+    "transactionVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "requestedBy": {
+      "type": "string"
+    },
+    "requestedAt": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    }
+  }
+}

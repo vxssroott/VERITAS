@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://config/transaction/state-graph",
+  "version": "1.0.0",
+  "authoritative": false,
+  "description": "Development transition graph. Production workflow must be institution-configured.",
+  "transitions": [
+    { "from": "DRAFT", "to": "VALIDATING" },
+    { "from": "VALIDATING", "to": "READY" },
+    { "from": "VALIDATING", "to": "FAILED" },
+    { "from": "READY", "to": "PENDING_REVIEW" },
+    { "from": "READY", "to": "CONSENT_REQUIRED" },
+    { "from": "PENDING_REVIEW", "to": "READY" },
+    { "from": "PENDING_REVIEW", "to": "AUTHORIZED" },
+    { "from": "PENDING_REVIEW", "to": "REJECTED" },
+    { "from": "AUTHORIZED", "to": "EXECUTION_ELIGIBLE" },
+    { "from": "EXECUTION_ELIGIBLE", "to": "CONSENT_REQUIRED" },
+    { "from": "CONSENT_REQUIRED", "to": "EXECUTING" },
+    { "from": "EXECUTING", "to": "TRANSMITTED" },
+    { "from": "TRANSMITTED", "to": "ACKNOWLEDGED" },
+    { "from": "ACKNOWLEDGED", "to": "SETTLED" },
+    { "from": "SETTLED", "to": "RECONCILING" },
+    { "from": "RECONCILING", "to": "COMPLETED" },
+    { "from": "EXECUTING", "to": "FAILED" },
+    { "from": "TRANSMITTED", "to": "FAILED" },
+    { "from": "ACKNOWLEDGED", "to": "FAILED" },
+    { "from": "READY", "to": "CANCELLED" },
+    { "from": "PENDING_REVIEW", "to": "CANCELLED" },
+    { "from": "CONSENT_REQUIRED", "to": "CANCELLED" }
+  ]
+}

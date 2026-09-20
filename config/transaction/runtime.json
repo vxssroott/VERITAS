@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "veritas://config/transaction/runtime",
+  "version": "1.0.0",
+  "authoritative": false,
+  "description": "Development transaction runtime configuration. Institution-specific production values must be supplied by the institutional configuration layer.",
+  "transactionIdPrefix": "TX",
+  "defaultEnvironment": "DEVELOPMENT",
+  "supportedStates": [
+    "DRAFT",
+    "VALIDATING",
+    "READY",
+    "PENDING_REVIEW",
+    "AUTHORIZED",
+    "EXECUTION_ELIGIBLE",
+    "CONSENT_REQUIRED",
+    "EXECUTING",
+    "TRANSMITTED",
+    "ACKNOWLEDGED",
+    "SETTLED",
+    "RECONCILING",
+    "COMPLETED",
+    "FAILED",
+    "CANCELLED",
+    "REJECTED"
+  ],
+  "executionEnabled": false,
+  "swiftTransmissionEnabled": false,
+  "fakeAcknowledgementAllowed": false,
+  "unknownStateIsSafeDefault": true
+}

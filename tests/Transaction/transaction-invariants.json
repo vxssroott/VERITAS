@@ -1,0 +1,28 @@
+﻿{
+  "phase": "4",
+  "name": "Canonical Transaction Engine",
+  "invariants": [
+    "unique_transaction_identity",
+    "institution_binding",
+    "environment_binding",
+    "monotonic_versioning",
+    "immutable_versions",
+    "explicit_state",
+    "configured_state_transitions_only",
+    "integrity_before_transition",
+    "optimistic_concurrency",
+    "canonical_shared_transaction",
+    "institution_configured_workflow",
+    "execution_separation",
+    "consent_separation",
+    "no_fake_transmission",
+    "no_fake_acknowledgement",
+    "unknown_remains_unknown",
+    "transaction_event_generation"
+  ],
+  "execution": {
+    "enabled": false,
+    "swiftTransmission": false,
+    "fakeAcknowledgements": false
+  }
+}

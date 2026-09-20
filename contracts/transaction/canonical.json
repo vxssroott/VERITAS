@@ -1,0 +1,84 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/transaction/canonical",
+  "title": "VERITAS Canonical Transaction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "transactionId",
+    "institutionId",
+    "environment",
+    "transactionType",
+    "version",
+    "state",
+    "createdAt",
+    "updatedAt",
+    "createdBy",
+    "integrity"
+  ],
+  "properties": {
+    "transactionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "institutionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "transactionType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "object"
+    },
+    "authorityContext": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "transactionData": {
+      "type": "object"
+    },
+    "workflow": {
+      "type": "object"
+    },
+    "integrity": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "canonicalDigest"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "canonicalDigest": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}
