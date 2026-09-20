@@ -1,0 +1,43 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/message/canonical",
+  "title": "VERITAS Canonical Message",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "messageId",
+    "transactionId",
+    "transactionVersion",
+    "profileId",
+    "standard",
+    "messageType",
+    "fields",
+    "integrity"
+  ],
+  "properties": {
+    "messageId": {
+      "type": "string"
+    },
+    "transactionId": {
+      "type": "string"
+    },
+    "transactionVersion": {
+      "type": "integer"
+    },
+    "profileId": {
+      "type": "string"
+    },
+    "standard": {
+      "type": "string"
+    },
+    "messageType": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "object"
+    },
+    "integrity": {
+      "type": "object"
+    }
+  }
+}

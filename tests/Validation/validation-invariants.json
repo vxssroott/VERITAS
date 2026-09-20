@@ -1,0 +1,26 @@
+﻿{
+  "phase": "6",
+  "name": "Transaction Validation and Message Construction",
+  "invariants": [
+    "message_profile_resolution",
+    "required_field_validation",
+    "field_type_validation",
+    "semantic_validation",
+    "reference_verification_separation",
+    "business_rule_separation",
+    "unknown_remains_unresolved",
+    "invalid_blocks_construction",
+    "canonical_message_identity",
+    "canonical_message_version_binding",
+    "message_integrity",
+    "no_transmission",
+    "no_delivery_claim",
+    "no_acknowledgement_claim",
+    "no_settlement_claim"
+  ],
+  "execution": {
+    "transmissionEnabled": false,
+    "externalDeliveryObserved": false,
+    "fakeAcknowledgements": false
+  }
+}

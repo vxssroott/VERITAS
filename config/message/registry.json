@@ -1,0 +1,60 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://config/message/registry",
+  "version": "1.0.0",
+  "authoritative": false,
+  "profiles": [
+    {
+      "profileId": "DEMO-SWIFT-TRANSFER",
+      "institutionId": "VERITAS-DEMO-INSTITUTION",
+      "environment": "DEVELOPMENT",
+      "transactionType": "SWIFT_TRANSFER",
+      "standard": "SWIFT",
+      "messageType": "MT103",
+      "requiredFields": [
+        "amount",
+        "currency",
+        "beneficiaryName",
+        "destinationAccount",
+        "bic",
+        "valueDate",
+        "charges"
+      ],
+      "fieldRules": {
+        "currency": {
+          "type": "CURRENCY_CODE",
+          "required": true
+        },
+        "amount": {
+          "type": "POSITIVE_DECIMAL",
+          "required": true
+        },
+        "beneficiaryName": {
+          "type": "NON_EMPTY_TEXT",
+          "required": true
+        },
+        "destinationAccount": {
+          "type": "NON_EMPTY_TEXT",
+          "required": true
+        },
+        "bic": {
+          "type": "BIC",
+          "required": true
+        },
+        "valueDate": {
+          "type": "ISO_DATE",
+          "required": true
+        },
+        "charges": {
+          "type": "ENUM",
+          "allowed": [
+            "OUR",
+            "SHA",
+            "BEN"
+          ],
+          "required": true
+        }
+      }
+    }
+  ]
+}

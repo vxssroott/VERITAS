@@ -1,0 +1,13 @@
+﻿{
+  "phase": "6",
+  "name": "Message Construction",
+  "invariants": [
+    "transaction_bound",
+    "version_bound",
+    "profile_bound",
+    "integrity_bound",
+    "construction_only",
+    "transmission_disabled",
+    "external_result_not_inferred"
+  ]
+}

@@ -1,0 +1,44 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/validation/result",
+  "title": "VERITAS Validation Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "transactionId",
+    "transactionVersion",
+    "status",
+    "structural",
+    "semantic",
+    "references",
+    "business",
+    "checkedAt"
+  ],
+  "properties": {
+    "transactionId": {
+      "type": "string"
+    },
+    "transactionVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string"
+    },
+    "structural": {
+      "type": "object"
+    },
+    "semantic": {
+      "type": "object"
+    },
+    "references": {
+      "type": "object"
+    },
+    "business": {
+      "type": "object"
+    },
+    "checkedAt": {
+      "type": "string"
+    }
+  }
+}
