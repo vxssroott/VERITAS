@@ -1,0 +1,28 @@
+﻿{
+  "product": "VERITAS",
+  "version": "0.1.0",
+  "environment": "DEVELOPMENT",
+  "institution": {
+    "id": null,
+    "name": null,
+    "bic": null
+  },
+  "operator": {
+    "identity": null,
+    "role": null,
+    "authorityProfile": null
+  },
+  "execution": {
+    "enabled": false,
+    "requiresExplicitConsent": true
+  },
+  "evidence": {
+    "enabled": true
+  },
+  "logging": {
+    "enabled": true
+  },
+  "notifications": {
+    "enabled": true
+  }
+}
