@@ -1,0 +1,63 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://config/workflow/registry",
+  "version": "1.0.0",
+  "authoritative": false,
+  "description": "Development workflow registry. Production workflow must be institution-configured.",
+  "workflows": [
+    {
+      "workflowId": "DEFAULT-TRANSACTION",
+      "institutionId": "VERITAS-DEMO-INSTITUTION",
+      "environment": "DEVELOPMENT",
+      "transactionTypes": [
+        "SWIFT_TRANSFER"
+      ],
+      "initialState": "DRAFT",
+      "actions": [
+        {
+          "actionId": "SUBMIT",
+          "fromStates": [
+            "DRAFT"
+          ],
+          "toState": "VALIDATING",
+          "requiredOperation": "TRANSACTION.SUBMIT"
+        },
+        {
+          "actionId": "REQUEST_REVIEW",
+          "fromStates": [
+            "READY"
+          ],
+          "toState": "PENDING_REVIEW",
+          "requiredOperation": "TRANSACTION.REQUEST_REVIEW"
+        },
+        {
+          "actionId": "REVIEW_APPROVE",
+          "fromStates": [
+            "PENDING_REVIEW"
+          ],
+          "toState": "AUTHORIZED",
+          "requiredOperation": "TRANSACTION.REVIEW"
+        },
+        {
+          "actionId": "REVIEW_REJECT",
+          "fromStates": [
+            "PENDING_REVIEW"
+          ],
+          "toState": "REJECTED",
+          "requiredOperation": "TRANSACTION.REVIEW"
+        },
+        {
+          "actionId": "CANCEL",
+          "fromStates": [
+            "DRAFT",
+            "READY",
+            "PENDING_REVIEW",
+            "CONSENT_REQUIRED"
+          ],
+          "toState": "CANCELLED",
+          "requiredOperation": "TRANSACTION.CANCEL"
+        }
+      ]
+    }
+  ]
+}

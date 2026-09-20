@@ -1,0 +1,25 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/workflow/action",
+  "title": "VERITAS Workflow Action",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "actionId",
+    "requiredOperation"
+  ],
+  "properties": {
+    "actionId": {
+      "type": "string"
+    },
+    "fromStates": {
+      "type": "array"
+    },
+    "toState": {
+      "type": "string"
+    },
+    "requiredOperation": {
+      "type": "string"
+    }
+  }
+}

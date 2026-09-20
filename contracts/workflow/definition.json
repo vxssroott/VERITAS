@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "veritas://contracts/workflow/definition",
+  "title": "VERITAS Workflow Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "workflowId",
+    "institutionId",
+    "environment",
+    "transactionTypes",
+    "initialState",
+    "actions"
+  ],
+  "properties": {
+    "workflowId": {
+      "type": "string"
+    },
+    "institutionId": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "string"
+    },
+    "transactionTypes": {
+      "type": "array"
+    },
+    "initialState": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array"
+    }
+  }
+}

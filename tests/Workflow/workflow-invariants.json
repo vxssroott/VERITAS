@@ -1,0 +1,26 @@
+﻿{
+  "phase": "5",
+  "name": "Workflow and Authorization Orchestration",
+  "invariants": [
+    "institution_configured_workflow",
+    "state_bound_actions",
+    "no_universal_maker_checker",
+    "authority_required",
+    "capability_required",
+    "authorization_separate_from_execution",
+    "authorization_separate_from_consent",
+    "consent_boundary_preserved",
+    "integrity_preserved",
+    "concurrency_preserved",
+    "unknown_not_allowed",
+    "no_external_execution",
+    "no_fake_acknowledgement",
+    "operator_attribution",
+    "workflow_event_generation"
+  ],
+  "execution": {
+    "enabled": false,
+    "swiftTransmission": false,
+    "fakeAcknowledgements": false
+  }
+}
