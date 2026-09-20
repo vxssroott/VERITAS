@@ -1,0 +1,12 @@
+﻿{
+  "schema": "veritas://capabilities/registry/v1",
+  "version": "1.0.0",
+
+  "registry": {
+    "id": "CAPABILITY-REGISTRY",
+    "authoritative": false,
+    "environment": "DEVELOPMENT"
+  },
+
+  "capabilities": []
+}

@@ -1,0 +1,47 @@
+﻿{
+  "testSuite": "VERITAS.CapabilityPolicy",
+  "version": "1.0.0",
+
+  "tests": [
+    {
+      "id": "CP-001",
+      "name": "Missing capability registry remains unresolved",
+      "expected": "UNRESOLVED"
+    },
+    {
+      "id": "CP-002",
+      "name": "Inactive capability cannot authorize an operation",
+      "expected": "NOT_ELIGIBLE"
+    },
+    {
+      "id": "CP-003",
+      "name": "Out-of-scope operation cannot use capability",
+      "expected": "NOT_ELIGIBLE"
+    },
+    {
+      "id": "CP-004",
+      "name": "Out-of-scope resource cannot use capability",
+      "expected": "NOT_ELIGIBLE"
+    },
+    {
+      "id": "CP-005",
+      "name": "Configured amount constraint is enforced",
+      "expected": "NOT_ELIGIBLE"
+    },
+    {
+      "id": "CP-006",
+      "name": "Missing policy remains unresolved",
+      "expected": "UNRESOLVED"
+    },
+    {
+      "id": "CP-007",
+      "name": "Explicit policy denial blocks eligibility",
+      "expected": "NOT_ELIGIBLE"
+    },
+    {
+      "id": "CP-008",
+      "name": "Policy ALLOW only produces eligibility for consent",
+      "expected": "ELIGIBLE_FOR_CONSENT"
+    }
+  ]
+}

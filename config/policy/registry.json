@@ -1,0 +1,12 @@
+﻿{
+  "schema": "veritas://policy/registry/v1",
+  "version": "1.0.0",
+
+  "registry": {
+    "id": "POLICY-REGISTRY",
+    "authoritative": false,
+    "environment": "DEVELOPMENT"
+  },
+
+  "policySets": []
+}
